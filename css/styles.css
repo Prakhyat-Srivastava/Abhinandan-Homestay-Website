@@ -65,12 +65,36 @@ html {
 /* Hero Section Styling */
 .hero {
     position: relative;
-    background: url('images/hero-bg.jpg') no-repeat center center;
+    background: linear-gradient(135deg, #f9f9f9, #ffeaa7); /* Updated gradient background */
+    color: #ffffff; /* Text color */
+    padding: 100px 0;
+    text-shadow: 2px 2px 8px rgba(137, 138, 140, 0.99);
+    transition: background 0.3s ease-in-out;
+}
+
+/* Alternative Option: Hero with a Background Image */
+.hero-image {
+    position: relative;
+    background: url('images/icon/your') no-repeat center center;
     background-size: cover;
     color: #2f3542;
     padding: 100px 0;
     text-shadow: 2px 2px 8px rgba(47, 53, 66, 0.7);
-    overflow: hidden; /* Ensure no overlapping issues */
+    transition: background 0.3s ease-in-out;
+}
+
+/* Adjust Hero Text */
+.hero h1 {
+    font-size: 3.5em;
+    letter-spacing: 2px;
+    color: #eccc68;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Adds depth to the text */
+}
+
+.hero p {
+    font-size: 1.3em;
+    margin: 20px 0;
+    color: #2f3542;
 }
 
 .hero::before {
@@ -80,7 +104,7 @@ html {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.2); /* Background overlay */
+    background: rgba(191, 98, 5, 0.023); /* Background overlay */
     z-index: 0; /* Ensure background stays behind */
     pointer-events: none; /* Prevent it from blocking clicks */
 }
@@ -88,7 +112,7 @@ html {
 .hero h1 {
     font-size: 3.5em;
     letter-spacing: 2px;
-    color: #eccc68;
+    color: #ff893b;
     position: relative; /* Ensure text is above the overlay */
     z-index: 1;
 }
@@ -106,7 +130,7 @@ html {
     border: none;
     padding: 15px 30px;
     font-size: 1.2em; /* Slightly larger font size */
-    color: #2f3542; /* Text color */
+    color: #fae3cd; /* Text color */
     border-radius: 30px; /* Rounded corners */
     cursor: pointer;
     transition: all 0.3s ease-in-out;
