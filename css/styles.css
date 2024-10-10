@@ -1,0 +1,364 @@
+/* Custom CSS for additional styling */
+
+/* General Styling */
+body, html {
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar Styling */
+.navbar {
+    background: linear-gradient(90deg, #007bff, #00c6ff); /* Gradient background */
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #fff !important;
+    letter-spacing: 1px;
+}
+
+.navbar-brand img {
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
+.nav-link {
+    color: #fff !important;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding: 12px 20px;
+    margin: 0 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-link:hover {
+    color: #ffdd57 !important; /* Change color on hover */
+    background: rgba(255, 255, 255, 0.1); /* Background change on hover */
+    border-radius: 8px;
+}
+
+/* Active Link Styling */
+.nav-link.active {
+    color: #ffdd57 !important; /* Highlight active link */
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+}
+
+.navbar-toggler-icon {
+    filter: invert(1); /* Make the toggler icon visible */
+}
+
+/* Smooth Scroll for Anchor Links */
+html {
+    scroll-behavior: smooth; /* Smooth scrolling */
+}
+
+/* Hero Section Styling */
+.hero {
+    position: relative;
+    background: url('images/hero-bg.jpg') no-repeat center center;
+    background-size: cover;
+    color: #fff;
+    padding: 100px 0;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3); /* Add gradient overlay */
+    z-index: 0;
+}
+
+.hero h1, .hero p, .hero a {
+    position: relative;
+    z-index: 1;
+}
+
+.hero h1 {
+    font-size: 3.5em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.hero p {
+    font-size: 1.3em;
+    margin: 20px 0;
+}
+
+/* Button Styling */
+.btn-primary {
+    background: #007bff;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.1em;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-primary:hover {
+    background: #0056b3;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(0, 123, 255, 0.3);
+}
+
+.btn-custom {
+    background: #007bff;
+    border: none;
+    padding: 10px 20px;
+    color: #fff;
+    border-radius: 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-custom:hover {
+    background: #0056b3;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(0, 123, 255, 0.3);
+}
+
+/* Card Styling */
+.card {
+    transition: all 0.3s ease-in-out;
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.card h5 {
+    font-weight: 700;
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Section Headers */
+section h2 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: #444;
+    position: relative;
+    display: inline-block;
+}
+
+section h2::after {
+    content: '';
+    width: 80px;
+    height: 4px;
+    background: #007bff;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -15px;
+}
+
+/* Room Section */
+#rooms {
+    background-color: #f8f9fa;
+    padding: 50px 0;
+}
+
+#rooms .col-md-4 {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+#rooms .col-md-4:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+#rooms .col-md-4 img {
+    width: 100%;
+    height: 250px;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Overlay Effect for Rooms */
+.room-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 123, 255, 0.7); /* Semi-transparent blue overlay */
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2em;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+    border-radius: 8px;
+}
+
+#rooms .col-md-4:hover .room-overlay {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.room-overlay h5 {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Gallery Section Styling */
+#gallery {
+    padding: 50px 0;
+    background: #f8f9fa;
+}
+
+#gallery h2 {
+    margin-bottom: 30px;
+    font-size: 2.5em;
+    color: #333;
+}
+
+/* Smooth Scrolling Gallery */
+.gallery-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.gallery-inner {
+    display: flex;
+    animation: scroll 90s linear infinite; /* Increased duration for smoother scrolling */
+}
+
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); } /* Adjusted for a seamless transition */
+}
+
+.gallery-container img {
+    width: 200px;
+    height: 150px;
+    border-radius: 8px;
+    margin: 0 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.gallery-container img:hover {
+    transform: scale(1.1);
+}
+
+/* View Gallery Button */
+.view-gallery-btn {
+    background: #007bff;
+    border: none;
+    padding: 12px 24px;
+    font-size: 1.1em;
+    color: #fff;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.view-gallery-btn:hover {
+    background: #0056b3;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(0, 123, 255, 0.3);
+}
+/* Modal Styling */
+.modal-content {
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+.modal-header {
+    background: #007bff;
+    color: #fff;
+    padding: 20px;
+    border-bottom: none;
+}
+
+.modal-header h5 {
+    font-size: 1.8em;
+}
+
+.modal-body h4 {
+    color: #007bff;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+/* Carousel Controls */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: invert(1); /* Make the arrow icons visible on darker backgrounds */
+}
+
+/* Footer Styling */
+footer {
+    background: #222;
+    color: #aaa;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer p {
+    margin: 0;
+    font-size: 1em;
+}
+/* Location Section Styling */
+.location-section {
+    background: #f8f9fa;
+    padding: 50px 0;
+}
+
+.location-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    color: #333;
+    position: relative;
+}
+
+.location-section h2::after {
+    content: '';
+    width: 80px;
+    height: 4px;
+    background: #007bff;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -10px;
+}
+
+.map-container {
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+}
+
+.card-title {
+    color: #007bff;
+}
+
+.card-text {
+    font-size: 1.1em;
+    line-height: 1.6;
+}
