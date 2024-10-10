@@ -1,17 +1,15 @@
-/* Custom CSS for additional styling */
-
 /* General Styling */
 body, html {
-    font-family: 'Roboto', sans-serif;
-    color: #333;
-    background-color: #f5f5f5;
+    font-family: 'Merriweather', serif;
+    color: #2f3542;
+    background-color: #f5f6fa;
     margin: 0;
     padding: 0;
 }
 
 /* Navbar Styling */
 .navbar {
-    background: linear-gradient(90deg, #007bff, #00c6ff); /* Gradient background */
+    background: #f7f1e3;
     transition: all 0.3s ease-in-out;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -19,7 +17,7 @@ body, html {
 .navbar-brand {
     font-size: 1.8em;
     font-weight: bold;
-    color: #fff !important;
+    color: #2f3542 !important;
     letter-spacing: 1px;
 }
 
@@ -29,7 +27,7 @@ body, html {
 }
 
 .nav-link {
-    color: #fff !important;
+    color: #2f3542 !important;
     font-weight: 500;
     text-transform: uppercase;
     padding: 12px 20px;
@@ -38,25 +36,30 @@ body, html {
 }
 
 .nav-link:hover {
-    color: #ffdd57 !important; /* Change color on hover */
-    background: rgba(255, 255, 255, 0.1); /* Background change on hover */
+    color: #FF8838 !important;
+    background: rgba(255, 107, 129, 0.1);
     border-radius: 8px;
 }
 
 /* Active Link Styling */
 .nav-link.active {
-    color: #ffdd57 !important; /* Highlight active link */
-    background: rgba(255, 255, 255, 0.2);
+    color: #eccc68 !important;
+    background: rgba(236, 204, 104, 0.2);
     border-radius: 8px;
 }
 
+/* Navbar Toggler Styling */
+.navbar-toggler {
+    border: none; /* Remove default border */
+}
+
 .navbar-toggler-icon {
-    filter: invert(1); /* Make the toggler icon visible */
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(47,53,66, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"); /* Black Hamburger Icon */
 }
 
 /* Smooth Scroll for Anchor Links */
 html {
-    scroll-behavior: smooth; /* Smooth scrolling */
+    scroll-behavior: smooth;
 }
 
 /* Hero Section Styling */
@@ -64,9 +67,10 @@ html {
     position: relative;
     background: url('images/hero-bg.jpg') no-repeat center center;
     background-size: cover;
-    color: #fff;
+    color: #2f3542;
     padding: 100px 0;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    text-shadow: 2px 2px 8px rgba(47, 53, 66, 0.7);
+    overflow: hidden; /* Ensure no overlapping issues */
 }
 
 .hero::before {
@@ -76,70 +80,71 @@ html {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.3); /* Add gradient overlay */
-    z-index: 0;
-}
-
-.hero h1, .hero p, .hero a {
-    position: relative;
-    z-index: 1;
+    background: rgba(0, 0, 0, 0.2); /* Background overlay */
+    z-index: 0; /* Ensure background stays behind */
+    pointer-events: none; /* Prevent it from blocking clicks */
 }
 
 .hero h1 {
     font-size: 3.5em;
-    text-transform: uppercase;
     letter-spacing: 2px;
+    color: #eccc68;
+    position: relative; /* Ensure text is above the overlay */
+    z-index: 1;
 }
 
 .hero p {
     font-size: 1.3em;
     margin: 20px 0;
+    position: relative;
+    z-index: 1;
 }
 
 /* Button Styling */
 .btn-primary {
-    background: #007bff;
+    background: linear-gradient(135deg, #EEA74E, #FFD700); /* Gradient background */
     border: none;
     padding: 15px 30px;
-    font-size: 1.1em;
+    font-size: 1.2em; /* Slightly larger font size */
+    color: #2f3542; /* Text color */
+    border-radius: 30px; /* Rounded corners */
+    cursor: pointer;
     transition: all 0.3s ease-in-out;
+    box-shadow: 0 6px 16px rgba(255, 215, 0, 0.3); /* Add a soft shadow */
+    margin: 20px 0; /* Space around the button */
+    text-transform: uppercase; /* Uppercase text */
+    z-index: 1; /* Ensure the button is clickable */
+    position: relative; /* Stack it above other elements */
 }
 
-.btn-primary:hover {
-    background: #0056b3;
-    transform: translateY(-2px);
-    box-shadow: 0 8px 16px rgba(0, 123, 255, 0.3);
+/* Hover and Focus Effects */
+.btn-primary:hover,
+.btn-primary:focus {
+    background: linear-gradient(135deg, #FFD700, #EEA74E); /* Reverse the gradient on hover */
+    color: #ffffff; /* Text color change */
+    box-shadow: 0 8px 24px rgba(255, 215, 0, 0.5); /* Increase shadow intensity */
+    transform: translateY(-3px); /* Lift the button on hover */
 }
 
-.btn-custom {
-    background: #007bff;
-    border: none;
-    padding: 10px 20px;
-    color: #fff;
-    border-radius: 20px;
-    transition: all 0.3s ease-in-out;
+/* Active State for the Button */
+.btn-primary:active {
+    transform: translateY(0); /* Reset lift effect */
+    box-shadow: 0 4px 12px rgba(255, 215, 0, 0.2); /* Smaller shadow */
 }
 
-.btn-custom:hover {
-    background: #0056b3;
-    transform: translateY(-2px);
-    box-shadow: 0 8px 16px rgba(0, 123, 255, 0.3);
-}
 
 /* Card Styling */
 .card {
     transition: all 0.3s ease-in-out;
     border: none;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-}
-
-.card-body {
-    padding: 20px;
+    border-radius: 12px;
+    background: #f7f1e3;
 }
 
 .card h5 {
     font-weight: 700;
+    color: #eccc68;
 }
 
 .card:hover {
@@ -151,7 +156,7 @@ html {
 section h2 {
     font-size: 2.5em;
     margin-bottom: 40px;
-    color: #444;
+    color: #2f3542;
     position: relative;
     display: inline-block;
 }
@@ -160,16 +165,17 @@ section h2::after {
     content: '';
     width: 80px;
     height: 4px;
-    background: #007bff;
+    background: #eccc68;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
     bottom: -15px;
 }
 
+
 /* Room Section */
 #rooms {
-    background-color: #f8f9fa;
+    background-color: #f7f1e3;
     padding: 50px 0;
 }
 
@@ -181,26 +187,20 @@ section h2::after {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 }
 
-#rooms .col-md-4:hover {
-    transform: scale(1.05);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
-}
-
 #rooms .col-md-4 img {
     width: 100%;
     height: 250px;
-    border-radius: 8px;
+    border-radius: 12px;
     transition: all 0.3s ease-in-out;
 }
 
-/* Overlay Effect for Rooms */
 .room-overlay {
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 123, 255, 0.7); /* Semi-transparent blue overlay */
+    background: rgba(253,222,155, 0.8);
     color: #fff;
     display: flex;
     align-items: center;
@@ -208,49 +208,31 @@ section h2::after {
     font-size: 1.2em;
     opacity: 0;
     transition: all 0.3s ease-in-out;
-    border-radius: 8px;
+    border-radius: 12px;
+    cursor: pointer;
 }
 
 #rooms .col-md-4:hover .room-overlay {
     opacity: 1;
-    transform: translateY(0);
-}
-
-.room-overlay h5 {
-    text-transform: uppercase;
-    letter-spacing: 2px;
 }
 
 /* Gallery Section Styling */
-#gallery {
-    padding: 50px 0;
-    background: #f8f9fa;
-}
-
-#gallery h2 {
-    margin-bottom: 30px;
-    font-size: 2.5em;
-    color: #333;
-}
-
-/* Smooth Scrolling Gallery */
 .gallery-container {
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
     position: relative;
-    margin-bottom: 30px;
 }
 
 .gallery-inner {
     display: flex;
-    animation: scroll 90s linear infinite; /* Increased duration for smoother scrolling */
+    animation: scroll 90s linear infinite;
 }
 
 @keyframes scroll {
     0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); } /* Adjusted for a seamless transition */
+    100% { transform: translateX(-50%); }
 }
 
 .gallery-container img {
@@ -258,58 +240,45 @@ section h2::after {
     height: 150px;
     border-radius: 8px;
     margin: 0 10px;
-    transition: transform 0.3s ease-in-out;
 }
 
-.gallery-container img:hover {
-    transform: scale(1.1);
-}
-
-/* View Gallery Button */
+/* View Gallery Button Styling */
 .view-gallery-btn {
-    background: #007bff;
+    background: linear-gradient(135deg, #EEA74E, #FFD700); /* Gradient background */
     border: none;
-    padding: 12px 24px;
-    font-size: 1.1em;
-    color: #fff;
-    border-radius: 25px;
+    padding: 15px 30px; /* Increased padding */
+    font-size: 1.2em; /* Slightly larger font size */
+    color: #2f3542; /* Text color */
+    border-radius: 30px; /* Rounded corners */
     cursor: pointer;
     transition: all 0.3s ease-in-out;
+    box-shadow: 0 6px 16px rgba(255, 215, 0, 0.3); /* Add a soft shadow */
+    margin: 20px 0; /* Space around the button */
 }
 
-.view-gallery-btn:hover {
-    background: #0056b3;
-    transform: translateY(-2px);
-    box-shadow: 0 8px 16px rgba(0, 123, 255, 0.3);
-}
-/* Modal Styling */
-.modal-content {
-    border-radius: 12px;
-    overflow: hidden;
-    transition: all 0.3s ease-in-out;
+/* Hover and Focus Effects */
+.view-gallery-btn:hover,
+.view-gallery-btn:focus {
+    background: linear-gradient(135deg, #FFD700, #EEA74E); /* Reverse the gradient on hover */
+    color: #ffffff; /* Text color change */
+    box-shadow: 0 8px 24px rgba(255, 215, 0, 0.5); /* Increase shadow intensity */
+    transform: translateY(-3px); /* Lift the button on hover */
 }
 
-.modal-header {
-    background: #007bff;
-    color: #fff;
-    padding: 20px;
-    border-bottom: none;
+/* Active State for the Button */
+.view-gallery-btn:active {
+    transform: translateY(0); /* Reset lift effect */
+    box-shadow: 0 4px 12px rgba(255, 215, 0, 0.2); /* Smaller shadow */
 }
 
-.modal-header h5 {
-    font-size: 1.8em;
+/* Location Section */
+.location-section {
+    background: #f7f1e3;
+    padding: 50px 0;
 }
 
-.modal-body h4 {
-    color: #007bff;
-    font-weight: 700;
-    margin-bottom: 20px;
-}
-
-/* Carousel Controls */
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-    filter: invert(1); /* Make the arrow icons visible on darker backgrounds */
+.location-section h2 {
+    color: #2f3542;
 }
 
 /* Footer Styling */
@@ -324,41 +293,331 @@ footer p {
     margin: 0;
     font-size: 1em;
 }
-/* Location Section Styling */
-.location-section {
-    background: #f8f9fa;
-    padding: 50px 0;
+/* Modal Styling */
+.modal-content {
+    border-radius: 15px;
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.2); /* Soft shadow for the modal */
+    transition: all 0.3s ease-in-out;
 }
 
-.location-section h2 {
-    font-size: 2.5em;
-    margin-bottom: 30px;
-    color: #333;
-    position: relative;
+.modal-header {
+    background: #EEA74E; /* #EEA74E header to match the new theme */
+    color: #ffffff;
+    padding: 20px;
+    border-bottom: none;
 }
 
-.location-section h2::after {
+.modal-header h5 {
+    font-size: 1.8em;
+    font-weight: bold;
+}
+
+.modal-body h4 {
+    color: #EEA74E; /* Match the header color */
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+/* Updated Carousel Styling */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: none; /* Ensure the icons are visible */
+    background-color: transparent;
+}
+
+/* Circular Control Buttons */
+.carousel-control-prev,
+.carousel-control-next {
+    width: 50px; /* Smaller buttons */
+    height: 50px;
+    border-radius: 50%; /* Make the controls circular */
+    background-color: #EEA74E; /* Control button color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 50%; /* Center align */
+    transform: translateY(-50%); /* Vertical align */
+    transition: all 0.3s ease-in-out; /* Smooth transition */
+}
+
+/* White arrow icons within the circular buttons */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    color: #ffffff; /* White color */
+    background-image: none; /* Remove default icons */
+}
+
+.carousel-control-prev-icon::after,
+.carousel-control-next-icon::after {
     content: '';
-    width: 80px;
-    height: 4px;
-    background: #007bff;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: -10px;
+    border: solid #ffffff; /* White arrow */
+    border-width: 0 3px 3px 0; /* Customize arrow design */
+    display: inline-block;
+    padding: 5px;
 }
 
-.map-container {
-    border: 1px solid #ddd;
+/* Custom arrow icons */
+.carousel-control-prev-icon::after {
+    transform: rotate(135deg); /* Left arrow */
+}
+
+.carousel-control-next-icon::after {
+    transform: rotate(-45deg); /* Right arrow */
+}
+
+/* Hover effect for control buttons */
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    background-color: #E98B16; /* Darker #EEA74E on hover */
+}
+/* Connect with Us Section */
+#connect {
+    background: #fffaf0;
+    padding: 60px 0;
+}
+
+#connect h2 {
+    font-size: 2.5em;
+    color: #2f3542;
+    margin-bottom: 40px;
+}
+
+#connect .card {
+    background: #fffaf0;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 12px;
+    border-radius: 15px;
+    border: none;
+    transition: all 0.3s ease-in-out;
 }
 
-.card-title {
-    color: #007bff;
+#connect .card h5 {
+    font-size: 1.4em;
+    color: #eccc68;
+    font-weight: bold;
 }
 
-.card-text {
+#connect .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+#connect .card-body {
+    padding: 25px 20px;
+}
+
+/* Call Us Button */
+.btn-call {
+    background: #ffd32a; /* Yellow background */
+    color: #2f3542; /* Dark text */
+    padding: 12px 30px;
     font-size: 1.1em;
-    line-height: 1.6;
+    border: none;
+    border-radius: 25px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 6px 16px rgba(255, 211, 42, 0.3);
 }
+
+.btn-call:hover {
+    background: #ffa502; /* Darker yellow */
+    color: #ffffff;
+    box-shadow: 0 8px 24px rgba(255, 165, 2, 0.5);
+    transform: translateY(-3px);
+}
+
+/* WhatsApp Button */
+.btn-whatsapp {
+    background: #25d366; /* WhatsApp green */
+    color: #ffffff;
+    padding: 12px 30px;
+    font-size: 1.1em;
+    border: none;
+    border-radius: 25px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 6px 16px rgba(37, 211, 102, 0.3);
+}
+
+.btn-whatsapp:hover {
+    background: #128c7e; /* Darker green */
+    color: #ffffff;
+    box-shadow: 0 8px 24px rgba(18, 140, 126, 0.5);
+    transform: translateY(-3px);
+}
+
+/* Instagram Button */
+.btn-instagram {
+    background: #405de6; /* Instagram blue */
+    color: #ffffff;
+    padding: 12px 30px;
+    font-size: 1.1em;
+    border: none;
+    border-radius: 25px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 6px 16px rgba(64, 93, 230, 0.3);
+}
+
+.btn-instagram:hover {
+    background: #833ab4; /* Darker gradient color */
+    color: #ffffff;
+    box-shadow: 0 8px 24px rgba(131, 58, 180, 0.5);
+    transform: translateY(-3px);
+}
+
+/* Airbnb Button */
+.btn-airbnb {
+    background: #ff5a5f; /* Airbnb red */
+    color: #ffffff;
+    padding: 12px 30px;
+    font-size: 1.1em;
+    border: none;
+    border-radius: 25px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 6px 16px rgba(255, 90, 95, 0.3);
+}
+
+.btn-airbnb:hover {
+    background: #ff385c; /* Darker red */
+    color: #ffffff;
+    box-shadow: 0 8px 24px rgba(255, 56, 92, 0.5);
+    transform: translateY(-3px);
+}
+
+/* MakeMyTrip Button */
+.btn-makemytrip {
+    background: #343a40; /* MakeMyTrip black */
+    color: #ffffff;
+    padding: 12px 30px;
+    font-size: 1.1em;
+    border: none;
+    border-radius: 25px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 6px 16px rgba(52, 58, 64, 0.3);
+}
+
+.btn-makemytrip:hover {
+    background: #495057; /* Darker grey */
+    color: #ffffff;
+    box-shadow: 0 8px 24px rgba(73, 80, 87, 0.5);
+    transform: translateY(-3px);
+}
+
+/* Submit Query Button */
+.btn-query {
+    background: #6c5ce7; /* Purple button */
+    color: #ffffff;
+    padding: 12px 30px;
+    font-size: 1.1em;
+    border: none;
+    border-radius: 25px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 6px 16px rgba(108, 92, 231, 0.3);
+}
+
+.btn-query:hover {
+    background: #4e3bc4; /* Darker purple */
+    color: #ffffff;
+    box-shadow: 0 8px 24px rgba(78, 59, 196, 0.5);
+    transform: translateY(-3px);
+}
+/* Adjust Button Styling */
+.btn-call, .btn-whatsapp, .btn-instagram, .btn-airbnb, .btn-makemytrip, .btn-query {
+    padding: 12px 25px; /* Smaller padding to reduce button size */
+    font-size: 1em; /* Slightly smaller font size */
+    border-radius: 20px; /* Reduced border radius */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Smaller shadow for the buttons */
+}
+
+/* Hover effects */
+.btn-call:hover, .btn-whatsapp:hover, .btn-instagram:hover, .btn-airbnb:hover, .btn-makemytrip:hover, .btn-query:hover {
+    transform: translateY(-2px); /* Slightly lifted effect */
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3); /* Enhanced shadow effect */
+}
+
+/* Darker Heading Colors for Card Titles */
+.card-title {
+    color: #2f3542; /* Darker shade for headings */
+    font-weight: bold; /* Make headings stand out */
+}
+
+/* Specific Button Color Styles */
+/* Call Us Button */
+.btn-call {
+    background: #fbc531; /* Yellow color for Call Us */
+    color: #2f3542;
+}
+
+.btn-call:hover {
+    background: #e1b12c; /* Darker yellow on hover */
+}
+
+/* WhatsApp Button */
+.btn-whatsapp {
+    background: #4CAF50; /* WhatsApp Green */
+    color: #fff;
+}
+
+.btn-whatsapp:hover {
+    background: #388E3C; /* Darker Green on hover */
+}
+
+/* Instagram Button */
+.btn-instagram {
+    background: #405DE6; /* Instagram Blue */
+    color: #fff;
+}
+
+.btn-instagram:hover {
+    background: #2D47B7; /* Darker Blue on hover */
+}
+
+/* Airbnb Button */
+.btn-airbnb {
+    background: #FF5A5F; /* Airbnb Red */
+    color: #fff;
+}
+
+.btn-airbnb:hover {
+    background: #E04850; /* Darker Red on hover */
+}
+
+/* MakeMyTrip Button */
+.btn-makemytrip {
+    background: #333333; /* Black color for MakeMyTrip */
+    color: #fff;
+}
+
+.btn-makemytrip:hover {
+    background: #111111; /* Darker black on hover */
+}
+
+/* Submit Query Button */
+.btn-query {
+    background: #6A0DAD; /* Purple color */
+    color: #fff;
+}
+
+.btn-query:hover {
+    background: #5A089B; /* Darker Purple on hover */
+}
+
+/* Additional Styling */
+.card {
+    background: #fff7e6; /* Lighter background for cards */
+    border: none; /* Remove borders */
+}
+
+.card-body {
+    padding: 20px; /* Maintain consistent padding */
+}
+

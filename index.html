@@ -14,7 +14,7 @@
         <div class="container">
             <!-- Logo Section -->
             <a class="navbar-brand" href="#">
-                <img src="images/logo.png" alt="Homestay Logo" width="40" height="40" class="d-inline-block align-text-middle">
+                <img src="images/icon/logo.png" alt="Homestay Logo" width="40" height="40" class="d-inline-block align-text-middle">
                 My Homestay
             </a>
             <!-- Toggler for Mobile View -->
@@ -37,7 +37,7 @@
                         <a class="nav-link" href="#connect">Connect</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#location">Our Location</a>:
+                        <a class="nav-link" href="#location">Our Location</a>
                     </li>
                 </ul>
             </div>
@@ -68,29 +68,29 @@
                 <!-- Room 1 -->
                 <div class="col-md-4 mb-4">
                     <h4>Room 1</h4>
-                    <div class="room-container">
+                    <div class="room-container" data-bs-toggle="modal" data-bs-target="#room1Modal">
                         <img src="images/room1/room1_1.png" class="img-fluid rounded mb-3 room-image" alt="Room 1">
                         <div class="room-overlay">
                             <h5>View Room</h5>
                         </div>
                     </div>
                 </div>
-    
+
                 <!-- Room 2 -->
                 <div class="col-md-4 mb-4">
                     <h4>Room 2</h4>
-                    <div class="room-container">
+                    <div class="room-container" data-bs-toggle="modal" data-bs-target="#room2Modal">
                         <img src="images/room2/room2_1.png" class="img-fluid rounded mb-3 room-image" alt="Room 2">
                         <div class="room-overlay">
                             <h5>View Room</h5>
                         </div>
                     </div>
                 </div>
-    
+
                 <!-- Room 3 -->
                 <div class="col-md-4 mb-4">
                     <h4>Room 3</h4>
-                    <div class="room-container">
+                    <div class="room-container" data-bs-toggle="modal" data-bs-target="#room3Modal">
                         <img src="images/room3/room3_1.png" class="img-fluid rounded mb-3 room-image" alt="Room 3">
                         <div class="room-overlay">
                             <h5>View Room</h5>
@@ -100,7 +100,7 @@
             </div>
         </div>
     </section>
-    
+
     
     <!-- Modal Structure -->
     <!-- Room 1 Modal -->
@@ -391,89 +391,88 @@
             </div>
         </div>
     </div>
-    <!-- Connect Section -->
-    <section id="connect" class="connect py-5 bg-light">
-        <div class="container">
-            <h2 class="text-center mb-5">Connect with Us</h2>
-            <div class="row justify-content-center">
-                <!-- Call Us Link -->
-                <div class="col-md-4 mb-4">
-                    <div class="card text-center border-warning">
-                        <div class="card-body">
-                            <h5 class="card-title">Call Us</h5>
-                            <p class="card-text">Reach us directly with just one click.</p>
-                            <a href="tel:+911234567890" class="btn btn-warning">
-                                <i class="bi bi-telephone-fill"></i> Call Us
-                            </a>
-                        </div>
+    <<!-- Connect Section -->
+<section id="connect" class="connect py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center mb-5">Connect with Us</h2>
+        <div class="row justify-content-center">
+            <!-- Call Us Link -->
+            <div class="col-md-4 mb-4">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <h5 class="card-title">Call Us</h5>
+                        <p class="card-text">Reach us directly with just one click.</p>
+                        <a href="tel:+919555234605" class="btn btn-call">
+                            <i class="bi bi-telephone-fill"></i> Call Us
+                        </a>
                     </div>
                 </div>
-                <!-- WhatsApp Link -->
-                <div class="col-md-4 mb-4">
-                    <div class="card text-center border-primary">
-                        <div class="card-body">
-                            <h5 class="card-title">WhatsApp Us</h5>
-                            <p class="card-text">Chat with us directly on WhatsApp for inquiries or bookings.</p>
-                            <a href="https://wa.me/YOUR_WHATSAPP_NUMBER" target="_blank" class="btn btn-success">
-                                <i class="bi bi-whatsapp"></i> Message Us
-                            </a>
-                        </div>
+            </div>
+            <!-- WhatsApp Link -->
+            <div class="col-md-4 mb-4">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <h5 class="card-title">WhatsApp Us</h5>
+                        <p class="card-text">Chat with us directly on WhatsApp for inquiries or bookings.</p>
+                        <a href="https://wa.me/YOUR_WHATSAPP_NUMBER" target="_blank" class="btn btn-whatsapp">
+                            <i class="bi bi-whatsapp"></i> Message Us
+                        </a>
                     </div>
                 </div>
-                
-                <!-- Instagram Link -->
-                <div class="col-md-4 mb-4">
-                    <div class="card text-center border-info">
-                        <div class="card-body">
-                            <h5 class="card-title">Follow Us on Instagram</h5>
-                            <p class="card-text">Stay updated with our latest photos and stories.</p>
-                            <a href="https://www.instagram.com/YOUR_INSTAGRAM_PROFILE" target="_blank" class="btn btn-info">
-                                <i class="bi bi-instagram"></i> Follow
-                            </a>
-                        </div>
+            </div>
+            <!-- Instagram Link -->
+            <div class="col-md-4 mb-4">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <h5 class="card-title">Follow Us on Instagram</h5>
+                        <p class="card-text">Stay updated with our latest photos and stories.</p>
+                        <a href="https://www.instagram.com/abhinandan_homestay_ayodhya" target="_blank" class="btn btn-instagram">
+                            <i class="bi bi-instagram"></i> Follow
+                        </a>
                     </div>
                 </div>
-    
-                <!-- Airbnb Link -->
-                <div class="col-md-4 mb-4">
-                    <div class="card text-center border-danger">
-                        <div class="card-body">
-                            <h5 class="card-title">Airbnb Listing</h5>
-                            <p class="card-text">Book your stay through our Airbnb profile.</p>
-                            <a href="https://www.airbnb.com/rooms/YOUR_AIRBNB_LINK" target="_blank" class="btn btn-danger">
-                                <i class="bi bi-house-door"></i> View on Airbnb
-                            </a>
-                        </div>
+            </div>
+            <!-- Airbnb Link -->
+            <div class="col-md-4 mb-4">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <h5 class="card-title">Airbnb Listing</h5>
+                        <p class="card-text">Book your stay through our Airbnb profile.</p>
+                        <a href="https://www.airbnb.com/rooms/YOUR_AIRBNB_LINK" target="_blank" class="btn btn-airbnb">
+                            <i class="bi bi-house-door"></i> View on Airbnb
+                        </a>
                     </div>
                 </div>
-                
-                <!-- MakeMyTrip Link -->
-                <div class="col-md-4 mb-4">
-                    <div class="card text-center border-dark">
-                        <div class="card-body">
-                            <h5 class="card-title">Book on MakeMyTrip</h5>
-                            <p class="card-text">Find exclusive deals on MakeMyTrip for our property.</p>
-                            <a href="https://www.makemytrip.com/hotels/YOUR_MMT_LINK" target="_blank" class="btn btn-dark">
-                                <i class="bi bi-bookmark"></i> View on MakeMyTrip
-                            </a>
-                        </div>
+            </div>
+            <!-- MakeMyTrip Link -->
+            <div class="col-md-4 mb-4">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <h5 class="card-title">Book on MakeMyTrip</h5>
+                        <p class="card-text">Find exclusive deals on MakeMyTrip for our property.</p>
+                        <a href="https://www.makemytrip.com/hotels/YOUR_MMT_LINK" target="_blank" class="btn btn-makemytrip">
+                            <i class="bi bi-bookmark"></i> View on MakeMyTrip
+                        </a>
                     </div>
                 </div>
-                <!-- Query Button for Google Form -->
-                <div class="col-md-4 mb-4">
-                    <div class="card text-center border-secondary">
-                        <div class="card-body">
-                            <h5 class="card-title">Have a Query?</h5>
-                            <p class="card-text">Ask us anything related to our property and services.</p>
-                            <a href="https://forms.gle/YOUR_GOOGLE_FORM_LINK" target="_blank" class="btn btn-secondary">
-                                <i class="bi bi-question-circle-fill"></i> Submit Query
-                            </a>
-                        </div>
+            </div>
+            <!-- Submit Query Link -->
+            <div class="col-md-4 mb-4">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <h5 class="card-title">Have a Query?</h5>
+                        <p class="card-text">Ask us anything related to our property and services.</p>
+                        <a href="https://forms.gle/YOUR_GOOGLE_FORM_LINK" target="_blank" class="btn btn-query">
+                            <i class="bi bi-question-circle-fill"></i> Submit Query
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
+
+
     <!-- Location Section -->
     <section id="location" class="location-section py-5">
         <div class="container">
@@ -486,11 +485,9 @@
                             <h5 class="card-title">Visit Us At</h5>
                             <p class="card-text">
                                 Abhinandan Homestay,<br>
-                                123 Homestay Street,<br>
-                                Premium Locality,<br>
-                                Near Ram Mandir,<br>
-                                City XYZ, 12345<br>
-                                <strong>Contact: +91 1234567890</strong>
+                                M-907 Awas Vikas Colony Beniganj,<br>
+                                Ayodhya Faizabad, 224001 <br>
+                                <strong>Contact: +91 9555234605</strong>
                             </p>
                         </div>
                     </div>
@@ -499,12 +496,15 @@
                 <!-- Google Map Embed -->
                 <div class="col-md-8 mb-4">
                     <div class="map-container" style="border-radius: 10px; overflow: hidden;">
-                        <iframe width="100%" height="350" id="gmap_canvas" src="https://maps.google.com/maps?q=Ram%20Mandir%20Ayodhya&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                        <iframe width="100%" height="350" id="gmap_canvas" 
+                                src="https://maps.google.com/maps?q=26.782601,82.173149&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+                                frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
 
     <!-- Bootstrap JS and jQuery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
